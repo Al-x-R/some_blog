@@ -1,6 +1,6 @@
 require('dotenv').config()
-const jwt = require('jsonwebtoken'),
-	User = require('../../models/User')
+const jwt = require('jsonwebtoken')
+const	User = require('../../models/User')
 
 module.exports = function(req, res, next) {
 	const bearerHeader = req.headers['authorization']

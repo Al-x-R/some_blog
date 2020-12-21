@@ -7,4 +7,4 @@ const createReducer = (initialState, handlers) => {
   };
 };
 
-export default createReducer();
+export default createReducer;

@@ -28,7 +28,7 @@ const handlers = {
     draftState.isLoading = false;
     draftState.error = error;
   }),
-  [AUTH_ACTION_TYPES.LOGOUT_REQUEST]: () => ({
+  [AUTH_ACTION_TYPES.LOGOUT_REQUEST_SUCCESS]: () => ({
     ...initialState,
   }),
 };

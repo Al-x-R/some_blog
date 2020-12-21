@@ -9,4 +9,5 @@ const {
 const client = axios.create(http);
 
 export const auth = new AuthApi({ client });
+
 export default client;

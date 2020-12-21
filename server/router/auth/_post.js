@@ -17,7 +17,7 @@ const authUser = (req, res, next) =>
             res.status(404).send({ error: 'No such user' });
           } else {
             const token = jwt.sign({ user }, process.env.SECRET_KEY);
-            res.status(200).send({ token });
+            res.status(201).send({ token });
           }
         }
       });

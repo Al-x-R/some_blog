@@ -8,11 +8,11 @@ module.exports = function(req, res, next) {
 		const bearer = bearerHeader.split(' ')[1]
 		jwt.verify(bearer, process.env.SECRET_KEY, (err, decrypted) => {
 			if (err) {
-				res.status(403).send({ error: 'Unauthorized' })
+				res.status(401).send({ error: 'Unauthorized' })
 			} else {
 				User.findOne({ _id: decrypted.user._id }, (err, user) => {
 					if (err || user === null) {
-						res.status(403).send({ error: 'No such user' })
+						res.status(404).send({ error: 'No such user' })
 					} else {
 						req.authUser = decrypted.user
 						next()
@@ -21,6 +21,6 @@ module.exports = function(req, res, next) {
 			}
 		})
 	} else {
-		res.status(403).send({ error: 'Unauthorized' })
+		res.status(401).send({ error: 'Unauthorized' })
 	}
 }

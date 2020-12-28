@@ -7,7 +7,7 @@ export default () => {
   return (
     <Switch>
       <Route path='/' component={HomePage} exact/>
-      <Route path={['/login']} component={AuthPage}/>
+      <Route path={['/login', '/signup']} component={AuthPage}/>
     </Switch>
   );
 }

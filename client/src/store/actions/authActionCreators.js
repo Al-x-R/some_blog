@@ -18,6 +18,22 @@ export const authRequestError = error => ({
   },
 });
 
+export const signInRequest = values => ({
+  type: AUTH_ACTION_TYPES.SIGNIN_REQUEST,
+  payload: {
+    values,
+  },
+});
+
+export const signUpRequest = values => ({
+  type: AUTH_ACTION_TYPES.SIGNUP_REQUEST,
+  payload: {
+    values,
+  },
+});
+
 export const logoutRequestSuccess = () => ({
   type: AUTH_ACTION_TYPES.LOGOUT_REQUEST_SUCCESS,
 });
+
+

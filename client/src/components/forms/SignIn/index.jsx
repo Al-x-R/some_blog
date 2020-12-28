@@ -6,8 +6,8 @@ import { TextField } from 'formik-material-ui';
 import useStyles from './styles';
 
 const initialValues = {
-  email: '',
-  password: '',
+  email: 'email@gmail.com',
+  password: 'Test1234',
 };
 
 const passwordRule = [

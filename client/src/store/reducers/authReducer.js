@@ -15,7 +15,7 @@ const handlers = {
   [AUTH_ACTION_TYPES.AUTH_REQUEST_SUCCESS]: produce((draftState, action) => {
     const {
       payload: {
-        data: { user },
+         user
       },
     } = action;
     draftState.isLoading = false;

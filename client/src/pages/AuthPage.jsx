@@ -1,6 +1,6 @@
-import React, { useState, useLayoutEffect, useCallback } from 'react';
-import { Link, Redirect, useLocation } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useState, useLayoutEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { signInRequest, signUpRequest } from '../store/actions/authActionCreators';
 import SignInForm from '../components/forms/SignIn';
 import SignUpForm from '../components/forms/SignUp';
@@ -14,7 +14,7 @@ const AuthPage = () => {
   const classes = useStyles();
 
   useLayoutEffect(() => {
-    setIsLogin(location.pathname === '/signin');
+    setIsLogin(location.pathname === '/login');
   }, [location.pathname]);
 
   const handleSubmit = values => {

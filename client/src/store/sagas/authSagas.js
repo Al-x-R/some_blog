@@ -1,7 +1,6 @@
-import * as API from '../../api/rest';
+import * as API from '../../services/api';
 import { put } from 'redux-saga/effects';
 import * as AuthActionCreator from '../actions/authActionCreators';
-
 
 const createAuthSaga = apiMethod =>
   function* authSaga(action) {

@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Box } from '@material-ui/core';
 import useStyles from './styles';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const classes = useStyles();
@@ -19,8 +20,12 @@ const Header = () => {
             <MenuIcon/>
           </IconButton>
           <Box>
-            <Button color="inherit" className={classes.menuButton}>Sign In</Button>
-            <Button color="inherit" className={classes.menuButton}>Sign Up</Button>
+            <Link to="/login" style={{ textDecoration: 'none', color: 'white' }}>
+              <Button color="inherit" className={classes.menuButton}>Sign In</Button>
+            </Link>
+            <Link to="/signup" style={{ textDecoration: 'none', color: 'white' }}>
+              <Button color="inherit" className={classes.menuButton}>Sign Up</Button>
+            </Link>
           </Box>
         </Toolbar>
       </Container>

@@ -18,16 +18,18 @@ const AuthPage = () => {
   }, [location.pathname]);
 
   const handleSubmit = values => {
-      dispatch(isLogin ? signInRequest(values) : signUpRequest(values));
-    };
+    dispatch(isLogin ? signInRequest(values) : signUpRequest(values));
+  };
 
   const Form = isLogin ? SignInForm : SignUpForm;
   const pageTitle = isLogin ? 'LOGIN TO YOUR ACCOUNT' : 'CREATE AN ACCOUNT';
 
   return (
-    <div className={classes.main}>
-      <h1>{pageTitle}</h1>
-      <Form onSubmit={handleSubmit} />
+    <div>
+      <div className={classes.main}>
+        <h1>{pageTitle}</h1>
+        <Form onSubmit={handleSubmit}/>
+      </div>
     </div>
   );
 };

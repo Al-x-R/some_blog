@@ -5,7 +5,6 @@ import AuthApi from './AuthApi';
 const {
   api: { http },
 } = config;
-console.log('http => ', http)
 
 const client = axios.create(http);
 

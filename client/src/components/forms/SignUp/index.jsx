@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Field, Form, Formik } from 'formik';
 import useStyles from './styles';
 import { TextField } from 'formik-material-ui';
@@ -68,6 +69,7 @@ const SignUpForm = (props) => {
           >
             Submit
           </Button>
+          <p>Already have an account? <Link to='/login' style={{ textDecoration: 'none' }}>Login</Link></p>
         </Form>
       )}
     </Formik>

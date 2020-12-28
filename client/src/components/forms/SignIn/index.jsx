@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
 import { Formik, Form, Field } from 'formik';
 import { Button } from '@material-ui/core';
@@ -34,7 +35,6 @@ const SignInForm = (props) => {
             onSubmit={handleSubmit}>
       {({ submitForm, isSubmitting }) => (
         <Form className={classes.root}>
-
           <Field
             component={TextField}
             name="email"
@@ -60,6 +60,7 @@ const SignInForm = (props) => {
           >
             Submit
           </Button>
+          <p>Don`t have an account? <Link to='/signup' style={{ textDecoration: 'none' }}>Register</Link></p>
         </Form>
       )}
     </Formik>
